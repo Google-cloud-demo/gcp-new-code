@@ -17,6 +17,6 @@ steps:
   args: ['destroy', '-auto-approve']
   env:
     - "TF_VAR_project-name=data-button-357010"
-  substitutions:
-    _BUCKET: terraform-codes-backup 
-  tags: ['cloud-builders-community']
+substitutions:
+  _BUCKET: terraform-codes-backup 
+tags: ['cloud-builders-community']
