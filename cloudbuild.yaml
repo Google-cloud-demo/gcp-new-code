@@ -1,22 +1,22 @@
 steps:
-- name: 'gcr.io/data-button-357010/terraform'
+- name: 'gcr.io/data-button-357010/terraform:1.0.9'
   args: ['init',
     '-backend-config=project=data-button-357010',
     '-backend-config=bucket=terraform-codes-backup']
   env:
     - "TF_VAR_project-name=data-button-357010"
-- name: 'gcr.io/data-button-357010/terraform'
+- name: 'gcr.io/data-button-357010/terraform:1.0.9'
   args: ['plan']
   env:
     - "TF_VAR_project-name=data-button-357010"
-- name: 'gcr.io/data-button-357010/terraform'
+- name: 'gcr.io/data-button-357010/terraform:1.0.9'
   args: ['apply', '-auto-approve']
   env:
     - "TF_VAR_project-name=data-button-357010"
-- name: 'gcr.io/data-button-357010/terraform'
+- name: 'gcr.io/data-button-357010/terraform:1.0.9'
   args: ['destroy', '-auto-approve']
   env:
     - "TF_VAR_project-name=data-button-357010"
-substitutions:
+  substitutions:
     _BUCKET: terraform-codes-backup 
-tags: ['cloud-builders-community']
+  tags: ['cloud-builders-community']
