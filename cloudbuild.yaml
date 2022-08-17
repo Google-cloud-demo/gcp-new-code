@@ -2,7 +2,7 @@ steps:
 - name: 'gcr.io/data-button-357010/terraform'
   args: ['init',
     '-backend-config=project=data-button-357010',
-    '-backend-config=bucket=${_BUCKET}']
+    '-backend-config=bucket=terraform-codes-backup']
   env:
     - "TF_VAR_project-name=data-button-357010"
 - name: 'gcr.io/data-button-357010/terraform'
