@@ -1,19 +1,19 @@
 steps:
-- name: 'gcr.io/data-button-357010/terraform'
+- name: 'gcr.io/data-button-357010/terraform:1.2.5'
   args: ['init',
     '-backend-config=project=data-button-357010',
     '-backend-config=bucket=${_BUCKET}']
   env:
     - "TF_VAR_project-name=data-button-357010"
-- name: 'gcr.io/data-button-357010/terraform'
+- name: 'gcr.io/data-button-357010/terraform:1.2.5'
   args: ['plan']
   env:
     - "TF_VAR_project-name=data-button-357010"
-- name: 'gcr.io/data-button-357010/terraform'
+- name: 'gcr.io/data-button-357010/terraform:1.2.5'
   args: ['apply', '-auto-approve']
   env:
     - "TF_VAR_project-name=data-button-357010"
-- name: 'gcr.io/data-button-357010/terraform'
+- name: 'gcr.io/data-button-357010/terraform:1.2.5'
   args: ['destroy', '-auto-approve']
   env:
     - "TF_VAR_project-name=data-button-357010"
