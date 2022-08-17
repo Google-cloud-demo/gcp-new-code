@@ -18,5 +18,5 @@ steps:
   env:
     - "TF_VAR_project-name=data-button-357010"
 substitutions:
-    _BUCKET: terraform-codes-backup 
+    _BUCKET:
 tags: ['cloud-builders-community']
